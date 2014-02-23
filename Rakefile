@@ -1,11 +1,12 @@
 require 'rake/clean'
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rake/extensiontask'
+require 'rdoc/task'
 
 # get the devil version
 require './lib/devil/version'
-dlext = Config::CONFIG['DLEXT']
+dlext = RbConfig::CONFIG['DLEXT']
 
 CLEAN.include("ext/**/*.#{dlext}", "ext/**/.log", "ext/**/.o", "ext/**/*~", "ext/**/*#*", "ext/**/.obj", "ext/**/.def", "ext/**/.pdb")
 CLOBBER.include("**/*.#{dlext}", "**/*~", "**/*#*", "**/*.log", "**/*.o", "doc/**")
@@ -34,7 +35,7 @@ spec = Gem::Specification.new do |s|
   #s.files += ["lib/1.8/devil.so", "lib/1.9/devil.so"]
 end
 
-Rake::GemPackageTask.new(spec) do |pkg|
+Gem::PackageTask.new(spec) do |pkg|
   pkg.need_zip = false
   pkg.need_tar = false
 end
@@ -47,6 +48,8 @@ Rake::TestTask.new do |t|
   t.test_files = FileList['test/test*.rb']
   t.verbose = true
 end
+
+Rake::ExtensionTask.new('devil', spec)
 
 Rake::RDocTask.new do |rd|
   rd.main = "README"
