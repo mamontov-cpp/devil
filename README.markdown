@@ -1,16 +1,16 @@
 ![Alt text](http://dl.getdropbox.com/u/239375/DevIL.png)
 
-A version of Ruby Devil to work with Ruby 2.0+ and MinGW on Windows
+A Ruby 2.0+ Devil with better support for Windows
 ========================
 
-* Moved from all deprecated stuff, like Config (replaced by RbConfig)
-* Solved an issue, when compiling on Ruby 2.0 with MinGW caused errors.
+* Fixed all deprecation warnings, like using Config (replaced by RbConfig)
+* Solved an issue, when compiling on Ruby 2.0 on Windows caused errors.
 
 How to install
 ========================
 
 * Install Ruby DevKit, following instruction from DevKit's manual
-* Download DevIL from [http://openil.sourceforge.net/] and copy include files to %RUBYINSTALLDIR%/include/ and all library files
+* Download DevIL [here](http://openil.sourceforge.net/) and copy include files to %RUBYINSTALLDIR%/include/ and all library files
 to %RUBYINSTALLDIR%/lib/, where %RUBYINSTALLDIR% - folder, where Ruby installed (not DevKit)
 * This and following steps has been tested on Windows only. In gem folder run "rake compile"
 * Run "rake native gem"
