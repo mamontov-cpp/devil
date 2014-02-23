@@ -16,7 +16,7 @@ to %RUBYINSTALLDIR%/lib/, where %RUBYINSTALLDIR% - folder, where Ruby installed 
 * Run "rake native gem"
 * Run "cd pkg"
 * Run "gem install --local devil-0.1.9.5-x86-mingw32.gem" (x64 - if you architecture is x64)
-* That's all. Don't forget to copy shared libraries of DevIL to some easily accessible place for a system (like system32 folder or something)
+* That's all. Don't forget to copy shared libraries of DevIL to some easily accessible place for a system (like system32 folder)
 * If some step causes errors, check this [page](http://stackoverflow.com/questions/8644842/program-initialization-failed-0xc0150002-when-start-a-program-depend-on-a-thir)
 
 Ruby Devil version 0.1.9.5
