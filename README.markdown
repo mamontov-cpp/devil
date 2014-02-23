@@ -1,6 +1,6 @@
 ![Alt text](http://dl.getdropbox.com/u/239375/DevIL.png)
 
-A version of Ruby Devil to work with Ruby 2.0+ and MinGW on WIndows
+A version of Ruby Devil to work with Ruby 2.0+ and MinGW on Windows
 ========================
 
 * Moved from all deprecated stuff, like Config (replaced by RbConfig)
@@ -10,14 +10,14 @@ How to install
 ========================
 
 * Install Ruby DevKit, following instruction from DevKit's manual
-* Download DevIL from [http://openil.sourceforge.net/] and copy include files to %RUBY_INSTALL_FIR%/include/ and all library files
-to %RUBY_INSTALL_FIR%/lib/, where %RUBY_INSTALL_FIR% - folder, where Ruby installed (not DevKit)
+* Download DevIL from [http://openil.sourceforge.net/] and copy include files to %RUBYINSTALLDIR%/include/ and all library files
+to %RUBYINSTALLDIR%/lib/, where %RUBYINSTALLDIR% - folder, where Ruby installed (not DevKit)
 * This and following steps has been tested on Windows only. In gem folder run "rake compile"
 * Run "rake native gem"
 * Run "cd pkg"
 * Run "gem install --local devil-0.1.9.5-x86-mingw32.gem" (x64 - if you architecture is x64)
 * That's all. Don't forget to copy shared libraries of DevIL to some easily accessible place for a system (like system32 folder or something)
-* If some step causes errors, check this [http://stackoverflow.com/questions/8644842/program-initialization-failed-0xc0150002-when-start-a-program-depend-on-a-thir page]
+* If some step causes errors, check this [page](http://stackoverflow.com/questions/8644842/program-initialization-failed-0xc0150002-when-start-a-program-depend-on-a-thir)
 
 Ruby Devil version 0.1.9.5
 ========================
